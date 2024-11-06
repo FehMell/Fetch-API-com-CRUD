@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Anime</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+
+        }
+
+        th,
+        td {
+            border: 1px solid #2c3e6386;
+            padding: 8px;
+            background-color: white;
+            color: rgb(132, 152, 214);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            border-radius: 5px;
+            border: gray;
+            padding: 5px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #removeButton {
+            background-color: #dc143c;
+        }
+
+        #buscarButton {
+            background-color: #5ce75c;
+        }
+
+        #restartButton {
+            background-color: #ffdb58;
+        }
+
+        #buttonss {
+            text-align: center;
+        }
+
+        #h1 {
+            background-color: rgb(26, 97, 204);
+            color: white;
+            margin: 0;
+            padding: 1px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="h1">
+
+        <h1>Fetch API Jikan</h1>
+
+    </div>
+
+    <!-- Campo de entrada e botão -->
+
+    <br>
+
+    <div id="buttonss">
+
+        <input type="number" id="animeIdInput" placeholder="Digite o ID do anime a ser adicionado" />
+        <button id="buscarButton">Adicionar Anime</button>
+        <br><br>
+
+        <input type="number" id="removeIdAnime" placeholder="Digite o ID do anime a ser removido" />
+        <button id="removeButton" onclick="removeAnime(document.getElementById('removeIdAnime').value)">Remover
+            Anime</button>
+        <br><br>
+
+        <button id="restartButton" onclick="restartTable('animeTable')">Reiniciar Tabela</button>
+        <br><br>
+
+    </div>
+
+
+    <table id="animeTable">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Episódios</th>
+                <th>Pontuação</th>
+                <th>Ranking</th>
+                <th>id</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="trabalho.js"></script>
+
+</body>
+
+</html>
