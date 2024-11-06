@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
     <title>Buscar Anime</title>
     <style>
+        body  {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
         table {
-            width: 100%;
+            width: 95%;
+            margin: auto;
             border-collapse: collapse;
         }
 
@@ -15,8 +21,8 @@
         td {
             border: 1px solid #2c3e6386;
             padding: 8px;
-            background-color: white;
-            color: rgb(132, 152, 214);
+            background-color: #ffffff;
+            color: #8498d6;
         }
 
         h1 {
@@ -25,31 +31,43 @@
 
         button {
             border-radius: 5px;
-            border: gray;
+            border: #808080;
             padding: 5px;
             font-weight: bold;
-            color: white;
+            color: #ffffff;
         }
 
         #removeButton {
             background-color: #dc143c;
         }
+        
+        #removeButton:hover {
+            background-color: #e03f5f;
+        }
 
         #buscarButton {
-            background-color: #5ce75c;
+            background-color: #40d640;
+        }
+
+        #buscarButton:hover {
+            background-color: #6bec6b;
         }
 
         #restartButton {
+            background-color: #eec224;
+        }
+
+        #restartButton:hover {
             background-color: #ffdb58;
         }
 
-        #buttonss {
+        #input-div {
             text-align: center;
         }
 
         #h1 {
             background-color: rgb(26, 97, 204);
-            color: white;
+            color: #ffffff;
             margin: 0;
             padding: 1px;
         }
@@ -68,13 +86,13 @@
 
     <br>
 
-    <div id="buttonss">
+    <div id="input-div">
 
-        <input type="number" id="animeIdInput" placeholder="Digite o ID do anime a ser adicionado" />
+        <input type="number" id="animeIdInput" placeholder="Digite o ID do anime a adicionar" />
         <button id="buscarButton">Adicionar Anime</button>
         <br><br>
 
-        <input type="number" id="removeIdAnime" placeholder="Digite o ID do anime a ser removido" />
+        <input type="number" id="removeIdAnime" placeholder="Digite o ID do anime a remover" />
         <button id="removeButton" onclick="removeAnime(document.getElementById('removeIdAnime').value)">Remover
             Anime</button>
         <br><br>
@@ -92,7 +110,7 @@
                 <th>Episódios</th>
                 <th>Pontuação</th>
                 <th>Ranking</th>
-                <th>id</th>
+                <th>ID</th>
             </tr>
         </thead>
         <tbody>

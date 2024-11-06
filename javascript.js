@@ -37,7 +37,6 @@ function adicionarAnimeNaTabela(title, episodes, score, rank, mal_id) {
 }
 
 //CREATE
-
 function criarAnime(titulo, episodios, pontuacao, ranking, id) {
     adicionarAnimeNaTabela(titulo, episodios, pontuacao, ranking, id);
 }
